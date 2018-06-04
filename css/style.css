@@ -1,0 +1,153 @@
+/* Base Element Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  background: #FFFAF2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2 {
+  /* color: #2E1262; */
+  color: #74AC0D;
+}
+
+p {
+  color: #3a3a3a;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* Base Layout Styles */
+
+/* --- Navigation --- */
+.main-nav {
+  margin-top: 5px;
+}
+
+.site-name a, .main-nav a {
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+  color: #9D090A;
+}
+
+.main-nav a:hover {
+  color: #6D34D9;
+}
+
+.site-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+
+/* --- Page Elements ---  */
+.headline {
+  margin-bottom: 5px;
+  color: #2E1262;
+}
+
+/* --- Layout Container --- */
+
+.main-header {
+  padding: .5em 0;
+}
+
+.banner, .main-footer {
+  text-align: center;
+}
+
+/* fade out banner edges */
+.banner {
+  background: #A9ECEA;
+  padding: 3.2em 0;
+}
+
+.column {
+  padding: 0 1em;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 640px) {
+
+  .main-header, .main-nav, .row {
+    display: flex;
+  }
+
+  .main-header, .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .site-name, .main-nav {
+    flex-direction: row;
+  }
+
+  .banner {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    margin-bottom: 48px;
+  }
+
+  .column {
+    flex: 1 50%;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .tertiary {
+    order: -1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-header, .row {
+    widdth: 80%;
+    max-width: 1150px;
+  }
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .column {
+    flex-basis: 0;
+  }
+
+  .primary {
+    flex: 2;
+  }
+
+/* want to move this column below the others at this size */
+  .quatrenary {
+  }
+
+}
